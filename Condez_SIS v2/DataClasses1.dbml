@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DcondezSISDB" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-G6J8QFP\SQLEXPRESS01;Initial Catalog=DcondezSISDB;Integrated Security=True" SettingsObjectName="Condez_SIS_v2.Properties.Settings" SettingsPropertyName="DcondezSISDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DBCONDEZ" Member="DBCONDEZs">
+    <Type Name="DBCONDEZ">
+      <Column Name="STUDENT_NO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NAMEOFSTUDENT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="YEARSECTIONMAJOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="COURSE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BIRTHDAY" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CONTACTNUMBER" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ADDRESS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CONTACTPERSON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CONTACTPERSONADDRESS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CONTACTPERSONNUMBER" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StudentImage" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_DeleleStudent" Method="sp_DeleleStudent">
+    <Parameter Name="STUDENT_NO" Parameter="sTUDENT_NO" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_InsertStudent" Method="sp_InsertStudent">
+    <Parameter Name="NAMEOFSTUDENT" Parameter="nAMEOFSTUDENT" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="YEARSECTIONMAJOR" Parameter="yEARSECTIONMAJOR" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="COURSE" Parameter="cOURSE" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="BIRTHDAY" Parameter="bIRTHDAY" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="CONTACTNUMBER" Parameter="cONTACTNUMBER" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ADDRESS" Parameter="aDDRESS" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CONTACTPERSON" Parameter="cONTACTPERSON" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CONTACTPERSONADDRESS" Parameter="cONTACTPERSONADDRESS" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CONTACTPERSONNUMBER" Parameter="cONTACTPERSONNUMBER" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="StudentImage" Parameter="studentImage" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_updatestudent" Method="sp_updatestudent">
+    <Parameter Name="STUDENT_NO" Parameter="sTUDENT_NO" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="NAMEOFSTUDENT" Parameter="nAMEOFSTUDENT" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="YEARSECTIONMAJOR" Parameter="yEARSECTIONMAJOR" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="COURSE" Parameter="cOURSE" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="BIRTHDAY" Parameter="bIRTHDAY" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="CONTACTNUMBER" Parameter="cONTACTNUMBER" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ADDRESS" Parameter="aDDRESS" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CONTACTPERSON" Parameter="cONTACTPERSON" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CONTACTPERSONADDRESS" Parameter="cONTACTPERSONADDRESS" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CONTACTPERSONNUMBER" Parameter="cONTACTPERSONNUMBER" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="StudentImage" Parameter="studentImage" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
